@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 15s # 수집간격
+  scrape_timeout: 15s 
+  
+scrape_configs: 			        
+  - job_name: "myApplication"
+    metrics_path: '/actuator/prometheus' # spring Actuator pointcut    
+    static_configs:
+     # - targets: ["host.docker.internal:8080"]  
+      - targets: ["152.67.218.243:8080"]  
